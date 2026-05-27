@@ -1,0 +1,24 @@
+{
+  "name": "Focus Flow Coach",
+  "version": "1.0.0",
+  "interface": "hybrid",
+  "endpoints": {
+    "webhook": "https://eb78836414686b.lhr.life/webhook",
+    "mcp": "https://eb78836414686b.lhr.life/mcp"
+  },
+  "triggers": [
+    { "channel": "instant.message", "routing_mode": "active" }
+  ],
+  "domains": {
+    "productivity_coach": "Handle productivity check-ins, focus sessions, energy and mood logging, adaptive work suggestions, task breakdown, and productivity summaries. Match utterances like 'I’m starting deep work', 'my energy is low', 'help me break this down', 'I feel overwhelmed', 'what should I work on right now?', and 'when am I most productive?'."
+  },
+  "permissions": [
+    "notification.send",
+    "user.profile.read"
+  ],
+  "allowedTools": [],
+  "data_retention": {
+    "max_days": 30,
+    "deletion_webhook": "https://eb78836414686b.lhr.life/delete-user"
+  }
+}
